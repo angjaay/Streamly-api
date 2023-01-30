@@ -151,5 +151,5 @@ For more screenshots check out the vue frontend repo [VueTube](https://github.co
 
 This project is licensed under the MIT License
 
-## Developed by Reagan Ekhameye (Tech Reagan)
+## Forked from Reagan Ekhameye (Tech Reagan)
 
