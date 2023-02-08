@@ -1,6 +1,6 @@
-# VueTube RESTful API - YouTube Clone
+# Streamly RESTful API 
 
-> VueTube is a YouTube clone built with nodejs, expressjs & mongodb.
+> Streamly is a YouTube clone built with nodejs, expressjs & mongodb.
 
 ## Features
 
@@ -36,7 +36,7 @@
 
 ## Frontend Repo
 
-Frontend was developed with vue js and vuetify [VueTube](https://github.com/techreagan/vue-nodejs-youtube-clone)
+Frontend was developed with vue js and vuetify [VueTube](https://github.com/angjaay/Streamly-client)
 
 ## API Documentation
 
@@ -151,6 +151,5 @@ For more screenshots check out the vue frontend repo [VueTube](https://github.co
 
 This project is licensed under the MIT License
 
-## Developed by Reagan Ekhameye (Tech Reagan)
+## Forked from Reagan Ekhameye (Tech Reagan)
 
-Reach me on twitter [@techreagan](https://www.twitter.com/techreagan)
