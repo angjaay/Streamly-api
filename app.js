@@ -101,6 +101,23 @@ app.use(versionOne('search'), searchRoutes)
 
 app.use(errorHandler)
 
+const corsOptions = {
+    origin: 'http://localhost:8080/',
+    optionsSuccessStatus: 200,
+    credentials: true
+    
+}
+
+app.use(cors(corsOptions));
+
+
+app.use((req,res,next)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+})
+
 const PORT = process.env.PORT
 
 const server = app.listen(PORT, () => {
