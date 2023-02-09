@@ -121,6 +121,7 @@ app.use(errorHandler)
 const socketIO = require('socket.io')(http, {
 	cors: {
 		origin: ["http://localhost:8080", "https://streamly-client.netlify.app"]
+		
 	}
 });
 
