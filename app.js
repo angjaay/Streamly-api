@@ -103,6 +103,9 @@ app.use(versionOne('search'), searchRoutes)
 
 app.use(errorHandler)
 
+app.use("/",(req,res)=>{
+	res.send("Welcome to Streamly API")
+})
 // Catch all other routes and return the index file
 app.get('/*', (req, res) => { res.sendFile(path.join(__dirname, 
     '/public/index.html'));
