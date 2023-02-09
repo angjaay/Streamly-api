@@ -65,7 +65,7 @@ app.use(helmet())
 app.use(xss())
 
 // Enable CORS
-app.use(cors())
+// app.use(cors())
 
 // Rate limiting
 // const limiter = rateLimit({
