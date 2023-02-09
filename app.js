@@ -129,7 +129,7 @@ const server = app.listen(PORT, () => {
 
 const socketIO = require('socket.io')(server, {
 	cors: {
-		origin: ["http://localhost:8080", "http://streamly-client.netlify.app"]
+		origin: ["http://localhost:8080", "http://192.168.100.9:8080","http://localhost:8080/", "http://192.168.100.9:8080/", "http://streamly-client.netlify.app"]
 		
 	}
 });
