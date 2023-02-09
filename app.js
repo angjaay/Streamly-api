@@ -103,6 +103,11 @@ app.use(versionOne('search'), searchRoutes)
 
 app.use(errorHandler)
 
+// Catch all other routes and return the index file
+app.get('/*', (req, res) => { res.sendFile(path.join(__dirname, 
+    '/public/index.html'));
+   });
+
 const corsOptions = {
     origin: 'http://192.168.100.9:8080/',
     optionsSuccessStatus: 200,
