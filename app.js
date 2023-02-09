@@ -104,7 +104,7 @@ app.use(versionOne('search'), searchRoutes)
 app.use(errorHandler)
 
 const corsOptions = {
-    origin: ["http://localhost:8080", "http://192.168.100.9:8080","http://localhost:8080/", "http://192.168.100.9:8080/", "http://streamly-client.netlify.app"],
+    origin: 'http://192.168.100.9:8080/',
     optionsSuccessStatus: 200,
     credentials: true
     
