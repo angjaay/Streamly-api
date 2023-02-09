@@ -118,12 +118,6 @@ app.use(errorHandler)
 //     next();
 // })
 
-const socketIO = require('socket.io')(app, {
-	cors: {
-		origin: ["http://localhost:8080", "http://streamly-client.netlify.app"]
-		
-	}
-});
 
 const PORT = process.env.PORT
 
@@ -132,6 +126,14 @@ const server = app.listen(PORT, () => {
 		`We are live on ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
 	)
 })
+
+const socketIO = require('socket.io')(server, {
+	cors: {
+		origin: ["http://localhost:8080", "http://streamly-client.netlify.app"]
+		
+	}
+});
+
 
 // Handle unhandled promise rejections
 process.on('unhandledRejection', (err, promise) => {
