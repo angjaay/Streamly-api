@@ -101,22 +101,28 @@ app.use(versionOne('search'), searchRoutes)
 
 app.use(errorHandler)
 
-const corsOptions = {
-    origin: 'http://192.168.100.9:8080/',
-    optionsSuccessStatus: 200,
-    credentials: true
+// const corsOptions = {
+//     origin: 'http://192.168.100.9:8080/',
+//     optionsSuccessStatus: 200,
+//     credentials: true
     
-}
+// }
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 
-app.use((req,res,next)=>{
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-})
+// app.use((req,res,next)=>{
+//     res.setHeader('Access-Control-Allow-Origin', '*');
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+//     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//     next();
+// })
+
+const socketIO = require('socket.io')(http, {
+	cors: {
+		origin: ["http://localhost:8080", "https://streamly-client.netlify.app"]
+	}
+});
 
 const PORT = process.env.PORT
 
